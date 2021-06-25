@@ -2,7 +2,7 @@ const menuitem = document.querySelector('.menu');
 const slidebar = document.querySelector('.links');
 const modalbutton = document.querySelector('.btn-register');
 const modalclose = document.querySelector('.btn-close');
-const form = document.querySelector('.form-container');
+const modal = document.querySelector('.modal-container');
 const bodyselect = document.querySelector('body');
 
 function slideBar() {
@@ -13,15 +13,13 @@ function slideBar() {
 
 function modalMenu() {
     modalbutton.addEventListener('click', function(){
-        form.classList.add('form-container-active');
-        bodyselect.classList.add('disable'); 
+        modal.classList.add('modal-container-active');
     });
 }
 
 function modalClose() {
     modalclose.addEventListener('click', function(){
-        form.classList.remove('form-container-active');
-        bodyseelect.classList.remove('disable');
+        modal.classList.remove('modal-container-active');
     });
 }
 
