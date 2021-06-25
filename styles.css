@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    /* background-image:url(mountain.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: linear-gradi);
+    height: 100vh;
+    width: 100%; */
+}
+
+.bgimg {
+    object-fit: cover;
+    height: 100vh;
+    width: 100%;
+    filter:brightness(70%);
+}
+
+.topnavbar {
+    height: 10vh;
+    width: 100%;
+    background-color: #617073;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header, .links li {
+    color: #fff;
+}
+
+.links {
+    width: 30%;
+    list-style-type: none; 
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.menu {
+    display: none;
+}
+
+.line {
+    height: 4px;
+    background-color: #fff;
+    width: 27px;
+    margin-bottom: 3px;
+}
+
+.container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    z-index: 2;
+    text-align: center;
+}
+
+h1 {
+    color: #fff;
+}
+
+p {
+    color: #fff;
+    margin-top: 10px;
+}
+
+.btn-register {
+    margin-top: 30px;
+    padding: 5px 15px;
+}
+
+.container button {
+    background-color: #617073;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    font-family: Poppins;
+    font-size: 16px;
+    cursor:pointer;
+}
+
+.btn-close {
+    color: #111;
+    border-radius: 2px;
+    border: none;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.form-container button {
+    text-align: center;
+    font-size: 16px;
+    margin-left: 4px;
+    font-family: Poppins;
+    color: #111;
+}
+
+.form-container {
+    border-radius: 5px;
+    padding: 120px;
+    background-color: #617073;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+form {
+    color: #fff;
+    font-size: 30px;
+}
+
+.form-container-active {
+    z-index: 3;
+}
+
+@media screen and (max-width: 640px) {
+    .links {
+        position: absolute;
+        background-color:#617073;
+        right: 0px;
+        height: 90vh;
+        top: 10vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        z-index: 3;
+        transition: transform .3s ease-in;
+    }
+
+    .menu {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.links-active {
+    transform:translateX(0%);
+}
