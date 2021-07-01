@@ -23,6 +23,13 @@ function modalClose() {
     });
 }
 
+function ChangeTransition(){
+    document.querySelector(".links").style.transition = "none";
+    setTimeout(function(){
+    document.querySelector(".links").style.transition = "transform .3s ease-in"
+    }, 1000);
+    }
+
 slideBar();
 modalMenu();
 modalClose();
